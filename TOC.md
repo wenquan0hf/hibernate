@@ -21,4 +21,4 @@
 
 ### 原文地址 [http://www.tutorialspoint.com/hibernate/index.htm](http://www.tutorialspoint.com/hibernate/index.htm)
 
-### 完成日期 6月10日
+### 内容不多，尽快完成~
