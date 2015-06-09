@@ -8,8 +8,8 @@
 - [Hibernate - Persistent Class](persistent-class.md)  王鑫 -- 待校对
 - [Hibernate - Mapping Files](mapping-files.md)     于洋 -- 待校对
 - [Hibernate - Mapping Types](mapping-types.md)     于洋 -- 待校对
-- [Hibernate - Examples](examples.md)          苗帅 -- 待翻译
-- [Hibernate - O/R Mappings](or-mappings.md)      苗帅 -- 待翻译
+- [Hibernate - Examples](examples.md)          苗帅 -- 待校对
+- [Hibernate - O/R Mappings](or-mappings.md)      苗帅 -- 待校对
 - [Hibernate - Annotations](annotations.md)       牛子健 -- 待翻译
 - [Hibernate - Query Language](query-language.md)    牛子健 -- 待翻译
 - [Hibernate - Criteria Queries](criteria-queries.md)  于倩 -- 待校对
