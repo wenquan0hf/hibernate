@@ -1,7 +1,7 @@
 - [Hibernate - Home](home.md)              周思宇 -- 待翻译
 - [ORM - Overview](orm-overview.md)                周思宇 -- 待翻译
-- [Hibernate - Overview](overview.md)          赵洁 -- 待翻译
-- [Hibernate - Architecture](architecture.md)      赵洁 -- 待翻译
+- [Hibernate - Overview](overview.md)          赵洁 -- 待校对
+- [Hibernate - Architecture](architecture.md)      赵洁 -- 待校对
 - [Hibernate - Environment](environment.md)       张鸿硕 -- 待翻译
 - [Hibernate - Configuration](configuration.md)     张鸿硕 -- 待翻译
 - [Hibernate - Sessions](sessions.md)          王鑫 -- 待校对
