@@ -2,8 +2,8 @@
 - [ORM - Overview](orm-overview.md)                周思宇 -- 待翻译
 - [Hibernate - Overview](overview.md)          赵洁 -- 待校对
 - [Hibernate - Architecture](architecture.md)      赵洁 -- 待校对
-- [Hibernate - Environment](environment.md)       张鸿硕 -- 待翻译
-- [Hibernate - Configuration](configuration.md)     张鸿硕 -- 待翻译
+- [Hibernate - Environment](environment.md)       张鸿硕 -- 待校对
+- [Hibernate - Configuration](configuration.md)     张鸿硕 -- 待校对
 - [Hibernate - Sessions](sessions.md)          王鑫 -- 待校对
 - [Hibernate - Persistent Class](persistent-class.md)  王鑫 -- 待校对
 - [Hibernate - Mapping Files](mapping-files.md)     于洋 -- 待校对
