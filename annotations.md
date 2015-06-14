@@ -1,4 +1,4 @@
-# Hibernate - 注释
+# 注释
 
 到现在为止，你已经看到 Hibernate 如何使用 XML 映射文件来完成从 POJO 到数据库表的数据转换的，反之亦然。 Hibernate 注释是无需使用 XML 文件来定义映射的最新方法。你可以额外使用注释或直接代替 XML 映射元数据。
 
@@ -6,17 +6,17 @@ Hibernate 注释是一种强大来给对象和关系映射表提供元数据的�
 
 如果你想让你的应用程序移植到其他 EJB 3 的 ORM 应用程序中,您必须使用注释来表示映射信息，但是如果想要得到更大的灵活性,那么你应该使用基于 xml 的映射。
 
-## Hibernate注释的环境设置
+## Hibernate 注释的环境设置
 
 首先你必须确定你使用的是 JDK 5.0，否则你需要升级你的 JDK 至 JDK 5.0，来使你的主机能够支持注释。
 
-其次，你需要安装 Hibernate 3.x 注释包，可以从 sourceforge 行下载：[（下载 Hibernate 注释）](http://sourceforge.net/projects/hibernate/files/hibernate-annotations/)并且从 Hibernate 注释发布中拷贝 **hibernate-annotations.jar, lib/hibernate-comons-annotations.jar** 和 **lib/ejb3-persistence.jar** 到你的 CLASSPATH。
+其次，你需要安装 Hibernate 3.x 注释包，可以从 sourceforge 行下载：[（**下载 Hibernate 注释**）](http://sourceforge.net/projects/hibernate/files/hibernate-annotations/)并且从 Hibernate 注释发布中拷贝 **hibernate-annotations.jar, lib/hibernate-comons-annotations.jar** 和 **lib/ejb3-persistence.jar** 到你的 CLASSPATH。
 
 ## 注释类示例：
 
 正如我上面所提到的，所有的元数据被添加到 POJO java 文件代码中，这有利于用户在开发时更好的同时理解表的结构和 POJO。
 
-下面我们将使用EMPLOYEE表来存储对象:
+下面我们将使用 EMPLOYEE 表来存储对象:
 
 ```
 create table EMPLOYEE (
@@ -28,7 +28,7 @@ create table EMPLOYEE (
 );
 ```
 
-以下是用带有注释的员工类来映射使用定义好的Employee表的对象:
+以下是用带有注释的 Employee 类来映射使用定义好的 Employee 表的对象:
 
 ```
 import javax.persistence.*;
@@ -93,16 +93,16 @@ EJB 3 标准的注释包含在 **javax.persistence** 包，所以我们第一步
 
 每一个实体 bean 都有一个主键，你在类中可以用 **@Id** 来进行注释。主键可以是一个字段或者是多个字段的组合，这取决于你的表的结构。
 
-默认情况下，@Id 注释将自动确定最合适的主键生成策略，但是你可以通过使用 **@GeneratedValue** 注释来覆盖掉它。**策略**和**生成器**这两个参数我不打算在这里讨论，所以我们只使用默认键生成策略。让 Hibernate 确定使用哪些生成器类型来使代码移植于不同的数据库之间。
+默认情况下，@Id 注释将自动确定最合适的主键生成策略，但是你可以通过使用 **@GeneratedValue** 注释来覆盖掉它。**strategy** 和 **generator** 这两个参数我不打算在这里讨论，所以我们只使用默认键生成策略。让 Hibernate 确定使用哪些生成器类型来使代码移植于不同的数据库之间。
 
 ## @Column Annotation：
 
 @Column 注释用于指定某一列与某一个字段或是属性映射的细节信息。您可以使用以下列注释的最常用的属性:
 
-- **名称**属性允许显式地指定列的名称。
-- **长度**属性为用于映射一个值，特别为一个字符串值的列的大小。
-- **可以为空**属性允许当生成模式时，一个列可以被标记为非空。
-- **唯一**属性允许列中只能含有唯一的内容
+- **name** 属性允许显式地指定列的名称。
+- **length** 属性为用于映射一个值，特别为一个字符串值的列的大小。
+- **nullable** 属性允许当生成模式时，一个列可以被标记为非空。
+- **unique** 属性允许列中只能含有唯一的内容
 
 ## 创建应用类： 
 
@@ -233,7 +233,7 @@ public class ManageEmployee {
 }
 ```
 
-##数据库配置：
+## 数据库配置：
 
 现在，让我们创建 **hibernate.cfg.xml** 配置文件来定义数据库相关参数。
 
@@ -270,10 +270,10 @@ public class ManageEmployee {
 
 这里是编译并运行以上提到的应用程序的步骤。再继续编译和运行之前需要确保你正确设置路径和类路径。
 
-- 从目录中删除 Employee.hbm.xml 映射文件
-- 创建上述 Employee.java 源文件并编译
-- 创建上述 ManageEmployee.java 源文件并编译
-- 执行 ManageEmployee 二进制程序
+- 从目录中删除 Employee.hbm.xml 映射文件。
+- 创建上述 Employee.java 源文件并编译。
+- 创建上述 ManageEmployee.java 源文件并编译。
+- 执行 ManageEmployee 二进制程序。
 
 你将得到如下结果，并且记录会在 EMPLOYEE 表中记录。
 
