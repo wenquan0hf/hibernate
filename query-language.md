@@ -1,6 +1,6 @@
-# Hibernate - 查询语言
+# 查询语言
 
-Hibernate 查询语言 （HQL） 是一种面向对象的查询语言，类似于SQL，但是不是去对表和列进行操作，而是面向对象和他们的属性。 HQL 查询被 Hibernate 翻译为传统的 SQL 查询从而对数据库进行操作。
+Hibernate 查询语言（HQL）是一种面向对象的查询语言，类似于 SQL，但是不是去对表和列进行操作，而是面向对象和它们的属性。 HQL 查询被 Hibernate 翻译为传统的 SQL 查询从而对数据库进行操作。
 
 尽管你能直接使用本地 SQL 语句，但我还是建议你尽可能的使用 HQL 语句，以避免数据库关于可移植性的麻烦，并且体现了 Hibernate 的 SQL 生成和缓存策略。
 
@@ -52,11 +52,11 @@ Query query = session.createQuery(hql);
 List results = query.list();
 ```
 
-值得注意的是 **Employee.firstName** 是 Employee 对象的属性，而不是一个表的字段。
+值得注意的是 **Employee.firstName** 是 Employee 对象的属性，而不是一个 EMPLOYEE 表的字段。
 
 ## WHERE 子句
 
-如果你想要精确的从数据库存储中返回特定对象，你需要使用 WHERE 子句。下面是 WHERE 子句的简单语法例子：
+如果你想要精确地从数据库存储中返回特定对象，你需要使用 WHERE 子句。下面是 WHERE 子句的简单语法例子：
 
 ```
 String hql = "FROM Employee E WHERE E.id = 10";
@@ -151,7 +151,7 @@ System.out.println("Rows affected: " + result);
 HQL 类似于 SQL，支持一系列的聚合方法,他们以同样的方式在 HQL 和 SQL 中工作，以下列出了几种可用方法：
 
 |S.N.|方法|描述|
-| ------------- |:-------------:|:-------------:| 
+| :------------- |:-------------|:-------------| 
 |1|avg(property name)|属性的平均值|
 |2|count(property name or *)|属性在结果中出现的次数|
 |3|max(property name)|属性值的最大值|
@@ -171,8 +171,8 @@ List results = query.list();
 以下为两种分页查询界面的方法：
 
 |S.N.|方法&描述|
-| ------------- |:-------------:|
-|1|Query setFirstResult(int startPosition) <br> 该方法以一个整数表示结果中的第一行,从0行开始。|
+|:------------- |:-------------|
+|1|Query setFirstResult(int startPosition) <br> 该方法以一个整数表示结果中的第一行,从 0 行开始。|
 |2|Query setMaxResults(int maxResult) <br> 这个方法告诉 Hibernate 来检索固定数量，即 **maxResults** 个对象。|
 
 使用以上两种方法，我们可以在我们的 web 或 Swing 应用程序中构造一个分页组件。下面是示例,您可以扩展到每次取 10 行:
@@ -184,5 +184,3 @@ query.setFirstResult(1);
 query.setMaxResults(10);
 List results = query.list();
 ```
- 
-  
