@@ -1,7 +1,7 @@
 {
-    "name": "AWK 中文指南",
-    "introduction": "AWK是一种优良的文本处理工具，Linux及Unix环境中现有的功能最强大的数据处理引擎之一。",
-    "title": "为数据处理而生的语言 - 极客学院 Wiki",
-    "keywords": "AWK中文指南,AWK应用案例",
-    "description": "AWK 是 Unix/Linux 提供的样式扫描与处理工具，非常擅长处理结构化数据和生成表单。"
+    "name": "Hibernate 中文指南",
+    "introduction": "Hibernate 是一个高性能的对象/关系型持久化存储和查询的工具。",
+    "title": "Hibernate 中文指南 - 极客学院 Wiki",
+    "keywords": "Hibernate 中文指南,Hibernate 开发web应用",
+    "description": "Hibernate 用于从 Java 类到数据库表的映射，也有 Java 数据类型到 SQL 数据类型的映射，同时也提供了数据查询和检索服务。"
 }
