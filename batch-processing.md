@@ -13,9 +13,9 @@ tx.commit();
 session.close();
 ```  
 
-因为默认下，Hibernate 将缓存所有的在会话层缓存中的持久的对象并且最终你的应用程序将和 **OutOfMemoryException** 在第 50000 行的某处相遇。你可以解决这个问题，如果你和 Hibernate 使用**批处理**。  
+因为默认下，Hibernate 将缓存所有的在会话层缓存中的持久的对象并且最终你的应用程序将和 **OutOfMemoryException** 在第 50000 行的某处相遇。你可以解决这个问题，如果你在 Hibernate 使用**批处理**。  
 
-为了使用批处理这个特点，首先设置 **hibernate.jdbc.batch_size** 作为批的尺寸，取一个依赖于对象尺寸的值 20 或 50。这将告诉 hibernate 容器每 X 行为一批插入。为了在你的代码中实现这个我们将需要像以下这样做一些修改：  
+为了使用批处理这个特性，首先设置 **hibernate.jdbc.batch_size** 作为批处理的尺寸，取一个依赖于对象尺寸的值 20 或 50。这将告诉 hibernate 容器每 X 行为一批插入。为了在你的代码中实现这个我们将需要像以下这样做一些修改：  
 
 ```
 Session session = SessionFactory.openSession();
@@ -33,7 +33,7 @@ tx.commit();
 session.close();
 ```  
 
-上面的代码将使 INSERT 操作良好运行，但是如果你愿意进行 UPDATE 操作那么你可以使用一下代码达到这一点：  
+上面的代码将使 INSERT 操作良好运行，但是如果你愿意进行 UPDATE 操作那么你可以使用以下代码达到这一点：  
 
 ```
 Session session = sessionFactory.openSession();
@@ -56,7 +56,7 @@ tx.commit();
 session.close();
 ```  
 
-## 批处理样例：  
+## 批处理样例  
 
 让我们通过添加 **hibernate.jdbc.batch_size** 属性来修改配置文件：  
 
@@ -235,5 +235,4 @@ public class ManageEmployee {
 - 如上面显示的那样创建 Employee.hbm.xml 映射文件。
 - 如上面显示的那样创建 Employee.java 源文件并编译。
 - 如上面显示的那样创建 ManageEmployee.java 源文件并编译。
-- 执行 ManageEmployee binary 来运行在 EMPLOYEE 表单中创建 100000 个记录的程序。
- 
+- 执行 ManageEmployee 二进制代码来运行可以在 EMPLOYEE 表单中创建 100000 个记录的程序。

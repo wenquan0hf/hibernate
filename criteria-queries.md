@@ -1,4 +1,5 @@
-# 标准查询  
+# 标准查询
+
 Hibernate 提供了操纵对象和相应的 RDBMS 表中可用的数据的替代方法。一种方法是标准的 API，它允许你建立一个标准的可编程查询对象来应用过滤规则和逻辑条件。  
 
 Hibernate **Session** 接口提供了 **createCriteria()** 方法，可用于创建一个 **Criteria** 对象，使当您的应用程序执行一个标准查询时返回一个持久化对象的类的实例。  
@@ -21,10 +22,9 @@ cr.add(Restrictions.eq("salary", 2000));
 List results = cr.list();  
 ```  
 
-以下是几个例子，覆盖了不同的情况，可按要求进行使用：   
+以下是几个例子，涵盖了不同的情况，可按要求进行使用：   
 
 ```   
-
 Criteria cr = session.createCriteria(Employee.class);
 
 // To get records having salary more than 2000
@@ -53,7 +53,6 @@ cr.add(Restrictions.isEmpty("salary"));
 
 // To check if the given property is not empty
 cr.add(Restrictions.isNotEmpty("salary"));
-  
 ```   
 
 你可以模仿以下示例，使用逻辑表达式创建 AND 或 OR 的条件组合：  
@@ -78,7 +77,7 @@ List results = cr.list();
 
 另外，上述所有的条件都可按之前的教程中解释的那样与 HQL 直接使用。  
 
-## 分页使用标准：  
+## 分页使用标准
 
 这里有两种分页标准接口方法：   
 
@@ -87,7 +86,7 @@ List results = cr.list();
 | 1 | public Criteria setFirstResult(int firstResult)，这种方法需要一个代表你的结果集的第一行的整数，以第 0 行为开始。 
 | 2 | public Criteria setMaxResults(int maxResults)，这个方法设置了 Hibernate 检索对象的 **maxResults**。 
   
-利用上述两种方法结合在一起，我们可以在我们的 Web 或 Swing 应用程序构建一个分页组件。以下是一个例子，利用它你可以把一次取出 10 行：
+利用上述两种方法结合在一起，我们可以在我们的 Web 或 Swing 应用程序构建一个分页组件。以下是一个例子，利用它你可以一次取出 10 行：
 
 ``` 
 Criteria cr = session.createCriteria(Employee.class);
@@ -96,7 +95,7 @@ cr.setMaxResults(10);
 List results = cr.list();
 ``` 
 
-## 排序结果：  
+## 排序结果
 
 标准 API 提供了 **org.hibernate.criterion.order** 类可以去根据你的一个对象的属性把你的排序结果集按升序或降序排列。这个例子演示了如何使用 Order 类对结果集进行排序：  
 
@@ -114,11 +113,11 @@ crit.addOrder(Order.asc("salary"));
 List results = cr.list();  
 ```  
 
-## 预测与聚合：  
+## 预测与聚合  
 
-标准API提供了 **org.hibernate.criterion.projections** 类可得到各属性值的平均值，最大值或最小值。Projections 类与 Restrictions 类相似，均提供了几个获取预测实例的静态工厂方法。  
+标准 API 提供了 **org.hibernate.criterion.projections** 类可得到各属性值的平均值，最大值或最小值。Projections 类与 Restrictions 类相似，均提供了几个获取预测实例的静态工厂方法。  
 
-以下是几个例子，覆盖了不同的情况，可按要求进行使用：  
+以下是几个例子，涵盖了不同的情况，可按要求进行使用：  
 
 ```  
 Criteria cr = session.createCriteria(Employee.class);
@@ -142,7 +141,7 @@ cr.setProjection(Projections.min("salary"));
 cr.setProjection(Projections.sum("salary"));  
 ```   
 
-## 标准查询示例：  
+## 标准查询示例
 
 考虑下面的 POJO 类： 
 
@@ -353,15 +352,15 @@ public class ManageEmployee {
 }  
 ```   
 
-## 编译和执行：  
+## 编译和执行  
 
-这是编译并运行上述应用程序的步骤。确保你有适当的路径和路径，然后执行编译程序。  
+这是编译并运行上述应用程序的步骤。确保你有适当的 PATH 和 CLASSPATH，然后执行编译程序。  
 
 - 按照在配置一章讲述的方法创建 hibernate.cfg.xml 配置文件。  
 - 如上述所示创建 employee.hbm.xml 映射文件。  
 - 如上述所示创建 employee.java 源文件并编译。  
 - 如上述所示创建 manageemployee.java 源文件并编译。  
-- 二进制执行 manageemployee 去运行程序。  
+- 执行 manageemployee 二进制代码运行程序。  
 
 你会得到下面的结果，并且记录将会在 EMPLOYEE 表创建。 
 

@@ -9,9 +9,9 @@ public SQLQuery createSQLQuery(String sqlString) throws HibernateException
 
 当你通过一个包含 SQL 查询的 createsqlquery() 方法的字符串时，你可以将 SQL 的结果与现有的 Hibernate 实体，一个连接，或一个标量结果分别使用 addEntity(), addJoin(), 和 addScalar() 方法进行关联。  
 
-## 标量查询：  
+## 标量查询 
 
-最基本的 SQL 查询是从一个或多个列表中获取一个标量（值）列表。以下是使用本地SQL进行获取标量的值的语法：  
+最基本的 SQL 查询是从一个或多个列表中获取一个标量（值）列表。以下是使用本地 SQL 进行获取标量的值的语法：  
 
 ```  
 String sql = "SELECT first_name, salary FROM EMPLOYEE";
@@ -20,9 +20,9 @@ query.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
 List results = query.list();
 ```  
 
-## 实体查询：   
+## 实体查询 
  
-以上的查询都是关于返回标量值的查询，只是基础性地返回结果集中的“生”值。以下是从本地数据查询中通过 addEntity() 方法获取实体对象整体的语法：  
+以上的查询都是关于返回标量值的查询，只是基础性地返回结果集中的“原始”值。以下是从本地数据查询中通过 addEntity() 方法获取实体对象整体的语法：  
 
 ```
 String sql = "SELECT * FROM EMPLOYEE";
@@ -31,7 +31,7 @@ query.addEntity(Employee.class);
 List results = query.list(); 
 ```
 
-## 指定 SQL 查询： 
+## 指定 SQL 查询
 
 以下是从本地数据查询中通过 addEntity() 方法和使用指定 SQL 查询来获取实体对象整体的语法：  
 
@@ -43,7 +43,7 @@ query.setParameter("employee_id", 10);
 List results = query.list();  
 ```  
 
-## 本地 SQL 的例子：  
+## 本地 SQL 的例子
 
 考虑下面的 POJO 类： 
 
@@ -234,20 +234,19 @@ public class ManageEmployee {
 }
 ```  
 
-## 编译和执行：  
+## 编译和执行  
 
-这是编译并运行上述应用程序的步骤。确保你有适当的路径和路径，然后执行编译程序。  
+这是编译并运行上述应用程序的步骤。确保你有适当的 PATH 和 CLASSPATH，然后执行编译程序。  
 
 - 按照在配置一章讲述的方法创建 hibernate.cfg.xml 配置文件。  
 - 如上述所示创建 employee.hbm.xml 映射文件。  
 - 如上述所示创建 employee.java 源文件并编译。  
 - 如上述所示创建 manageemployee.java 源文件并编译。  
-- 二进制执行 manageemployee 去运行程序。  
+- 执行 manageemployee 二进制代码运行程序。  
 
 你会得到下面的结果，并且记录将会在 EMPLOYEE 表创建。   
 
 ``` 
-
 $java ManageEmployee
 .......VARIOUS LOG MESSAGES WILL DISPLAY HERE........
 

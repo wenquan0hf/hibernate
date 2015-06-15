@@ -4,7 +4,7 @@ Hibernate 需要事先知道在哪里找到映射信息，这些映射信息定�
   
 我会对 **hibernate.cfg.xml** 这个 XML 格式文件进行考虑，来在我的例子里指定需要的 Hibernate 应用属性。这个格式文件中大多数的属性都有它们应有的价值所以并不需要特意去指定它们，除非真的是有需要。这个文件保存在应用程序的类路径的根目录里。
 
-## Hibernate 属性：
+## Hibernate 属性
 
 下面是一个重要的属性列表，你可能需要表中的属性来在单独的情况下配置数据库。
 
@@ -29,9 +29,9 @@ Hibernate 需要事先知道在哪里找到映射信息，这些映射信息定�
 |5|	**hibernate.connection.username** <br>数据库用户名。|
 |6|	**hibernate.connection.password** <br>数据库密码。|
 
-## Hibernate 和 MySQL 数据库：
+## Hibernate 和 MySQL 数据库
 
-MYSQL 数据库是目前可用的开源数据库系统中最受欢迎的数据库之一。我们要创建 **hibernate.cfg.xml** 配置文件并将其放置在应用程序的 CLASSPATH 的根目录里。你要确保在你的 MySQL 数据库中 **testdb** 数据库是可用的，而且你要有一个用户 **test** 可用来访问数据库。
+MySQL 数据库是目前可用的开源数据库系统中最受欢迎的数据库之一。我们要创建 **hibernate.cfg.xml** 配置文件并将其放置在应用程序的 CLASSPATH 的根目录里。你要确保在你的 MySQL 数据库中 **testdb** 数据库是可用的，而且你要有一个用户 **test** 可用来访问数据库。
 
 XML 配置文件一定要遵守 Hibernate 3 Configuration DTD，在 http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd. 这个网址中是可以找到的。  
 
@@ -90,4 +90,3 @@ XML 配置文件一定要遵守 Hibernate 3 Configuration DTD，在 http://www.
 |SAP DB|	org.hibernate.dialect.SAPDBDialect  |
 |Sybase|	org.hibernate.dialect.SybaseDialect  |
 |Sybase Anywhere|	org.hibernate.dialect.SybaseAnywhereDialec|
- 

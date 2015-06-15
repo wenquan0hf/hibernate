@@ -84,11 +84,10 @@ create table EMPLOYEE (
 你需要以格式 <classname>.hbm.xml 保存映射文件。我们保存映射文件在 Employee.hbm.xml 中。让我们来详细地看一下在映射文件中使用的一些标签:  
 
 - 映射文件是一个以 **<hibernate-mapping>** 为根元素的 XML 文件，里面包含所有 <class> 标签。
-- **<Class>** 标签是用来定义从一个 JAVA 类到数据库表的特定映射。JAVA 的类名使用 **name** 属性来表示，数据库表明用 **table** 属性来表示。
+- **<class>** 标签是用来定义从一个 Java 类到数据库表的特定映射。Java 的类名使用 **name** 属性来表示，数据库表明用 **table** 属性来表示。
 - **<meta>** 标签是一个可选元素，可以被用来修饰类。
-- **<id>** 标签将类中独一无二的 ID 属性与数据库表中的主键关联起来。id 元素中的 **name** 属性引用类的性质，**column** 属性引用数据库表的列。**type** 属性保存 Hibernate 映射的类型，这个类型会将从 JAVA 转换成 SQL 数据类型。
+- **<id>** 标签将类中独一无二的 ID 属性与数据库表中的主键关联起来。id 元素中的 **name** 属性引用类的性质，**column** 属性引用数据库表的列。**type** 属性保存 Hibernate 映射的类型，这个类型会将从 Java 转换成 SQL 数据类型。
 - 在 id 元素中的 **<generator>** 标签用来自动生成主键值。设置 generator 标签中的 **class** 属性可以设置 **native** 使 Hibernate 可以使用 **identity**, **sequence** 或 **hilo** 算法根据底层数据库的情况来创建主键。
-- **<property>** 标签用来将 JAVA 类的属性与数据库表的列匹配。标签中 **name** 属性引用的是类的性质，**column** 属性引用的是数据库表的列。**type** 属性保存 Hibernate 映射的类型，这个类型会将从 JAVA 转换成 SQL 数据类型。
+- **<property>** 标签用来将 Java 类的属性与数据库表的列匹配。标签中 **name** 属性引用的是类的性质，**column** 属性引用的是数据库表的列。**type** 属性保存 Hibernate 映射的类型，这个类型会将从 Java 转换成 SQL 数据类型。
 
-还有一些其他属性和元素可用在映射文件中，我会在其他讨论 Hibernate 相关的主题中尽可能得涉及更多。
- 
+还有一些其它属性和元素可用在映射文件中，我会在其它讨论 Hibernate 相关的主题中尽可能得涉及更多。

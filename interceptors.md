@@ -1,6 +1,6 @@
 # 拦截器  
 
-你已经学到，在 Hibernate 中，一个对象将被创建和保持。一旦对象已经被修改，它必须被保存到数据库里。这个过程持续直到下一次对象被需要，它将被从持续的存储中上传。  
+你已经学到，在 Hibernate 中，一个对象将被创建和保持。一旦对象已经被修改，它必须被保存到数据库里。这个过程持续直到下一次对象被需要，它将被从持久的存储中加载。  
 
 因此一个对象通过它生命周期中的不同阶段，并且 **Interceptor 接口**提供了在不同阶段能被调用来进行一些所需要的任务的方法。这些方法是从会话到应用程序的回调函数，允许应用程序检查或操作一个持续对象的属性，在它被保存，更新，删除或上传之前。以下是在 Interceptor 接口中可用的所有方法的列表。  
 
@@ -22,7 +22,7 @@ Hibernate 拦截器给予了我们一个对象如何应用到应用程序和数�
 
 为了创建一个拦截器你可以直接实现 **Interceptor** 类或者继承 **EmptyInterceptor** 类。以下是简单的使用 Hibernate 拦截器功能的步骤。  
 
-## 创建拦截器：
+## 创建拦截器
 
 我们将在例子中继承 EmptyInterceptor，当 **Employee** 对象被创建和更新时拦截器的方法将自动被调用。你可以根据你的需求实现更多的方法。  
 
@@ -92,7 +92,7 @@ public class MyInterceptor extends EmptyInterceptor {
 }
 ```  
 
-## 创建 POJO 类：  
+## 创建 POJO 类 
 
 现在让我们稍微修改我们的第一个例子，我们使用 EMPLOYEE 表单和 Employee 类：  
 
@@ -136,7 +136,7 @@ public class Employee {
 }
 ```
 
-## 创建数据库表:  
+## 创建数据库表
 
 第二步将是在你的数据库中创建表。一张表对应每个你提供持久性的对象。考虑以上的对象需要被存储和检索到以下的 RDBM 表中：  
 
@@ -150,7 +150,7 @@ create table EMPLOYEE (
 );
 ```  
 
-## 创建 Mapping 配置文件：  
+## 创建 Mapping 配置文件
 
 这个步骤是来创建一个指导 Hibernate 如何将定义的类或者多个类映射到数据库表单中的映射文件。  
 
@@ -175,7 +175,7 @@ create table EMPLOYEE (
 </hibernate-mapping>
 ```  
 
-## 创建 Application 类：  
+## 创建 Application 类  
 
 最后，我们将用 main() 创建 application 类来运行应用程序。这里应该注意当创建 session 对象时我们使用 Interceptor 类作为参数。  
 
@@ -297,7 +297,7 @@ public class ManageEmployee {
 }
 ```  
 
-##　编译和执行：  
+##　编译和执行
 
 这里是编译和运行上面提及的应用程序的步骤。确保你已经在处理编译和执行前正确设置了 PATH 和 CLASSPATH。  
 
