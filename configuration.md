@@ -2,7 +2,7 @@
 
 Hibernate 需要事先知道在哪里找到映射信息，这些映射信息定义了 Java 类怎样关联到数据库表。Hibernate 也需要一套相关数据库和其它相关参数的配置设置。所有这些信息通常是作为一个标准的 Java 属性文件提供的，名叫 **hibernate.properties**。又或者是作为 XML 文件提供的，名叫 **hibernate.cfg.xml**。 
   
-我会对 **hibernate.cfg.xml** 这个 XML 格式文件进行考虑，来在我的例子里指定需要的 Hibernate 应用属性。这个格式文件中大多数的属性都有它们应有的价值所以并不需要特意去指定它们，除非真的是有需要。这个文件保存在应用程序的类路径的根目录里。
+我们将考虑 **hibernate.cfg.xml** 这个 XML 格式文件，来决定在我的例子里指定需要的 Hibernate 应用属性。这个 XML 文件中大多数的属性是不需要修改的。这个文件保存在应用程序的类路径的根目录里。
 
 ## Hibernate 属性
 
@@ -33,7 +33,7 @@ Hibernate 需要事先知道在哪里找到映射信息，这些映射信息定�
 
 MySQL 数据库是目前可用的开源数据库系统中最受欢迎的数据库之一。我们要创建 **hibernate.cfg.xml** 配置文件并将其放置在应用程序的 CLASSPATH 的根目录里。你要确保在你的 MySQL 数据库中 **testdb** 数据库是可用的，而且你要有一个用户 **test** 可用来访问数据库。
 
-XML 配置文件一定要遵守 Hibernate 3 Configuration DTD，在 http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd. 这个网址中是可以找到的。  
+XML 配置文件一定要遵守 Hibernate 3 Configuration DTD，在 [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd](http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd). 这个网址中是可以找到的。  
 
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
@@ -69,7 +69,7 @@ XML 配置文件一定要遵守 Hibernate 3 Configuration DTD，在 http://www.
 
 上面的配置文件包含与 hibernate-mapping 文件相关的 **&lt;mapping&gt;** 标签，我们将在下章看看 hibernate mapping 文件到底是什么并且要知道为什么用它，怎样用它。以下是各种重要数据库同源语属性类型的列表:
 
-|**Database**|**Dialect Property**|
+|**数据库**|**方言属性**|
 |:------------- |:-------------|  
 |DB2|	org.hibernate.dialect.DB2Dialect  |
 |HSQLDB|	org.hibernate.dialect.HSQLDialect  |

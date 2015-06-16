@@ -1,6 +1,6 @@
 # 架构 
 
-Hibernate 架构是分层的，让你保持脱离状态从而不必知道底层 API。Hibernate 利用数据库以及配置数据来为应用程序提供持续性服务（以及持续性对象）。
+Hibernate 架构是分层的，作为数据访问层，你不必知道底层 API 。Hibernate 利用数据库以及配置数据来为应用程序提供持续性服务（以及持续性对象）。
 
 下面是一个非常高水平的 Hibernate 应用程序架构视图。
 
@@ -10,7 +10,7 @@ Hibernate 架构是分层的，让你保持脱离状态从而不必知道底层 
 
 ![image](images/hibernate_architecture.jpg)
 
-Hibernate 使用不同的现存 Java API，比如 JDBC，Java 事务 API（JTA），以及 Java 命名和目录界面（JNDI）。JDBC 提供了一个基本的抽象级别的通用关系数据库的功能，允许几乎所有带有 JDBC 驱动的数据库可以由 Hibernate 支持。JNDI 和 JTA 允许 Hibernate 与 J2EE 应用程序服务器相集成。
+Hibernate 使用不同的现存 Java API，比如 JDBC，Java 事务 API（JTA），以及 Java 命名和目录界面（JNDI）。JDBC 提供了一个基本的抽象级别的通用关系数据库的功能， Hibernate 支持几乎所有带有 JDBC 驱动的数据库。JNDI 和 JTA 允许 Hibernate 与 J2EE 应用程序服务器相集成。
 
 下面的部分简要地描述了在 Hibernate 应用程序架构所涉及的每一个类对象。
 

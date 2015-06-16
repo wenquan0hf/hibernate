@@ -151,7 +151,7 @@ System.out.println("Rows affected: " + result);
 HQL 类似于 SQL，支持一系列的聚合方法,它们以同样的方式在 HQL 和 SQL 中工作，以下列出了几种可用方法：
 
 |S.N.|方法|描述|
-| :------------- |:-------------|:-------------| 
+|:------------- |:-------------|:-------------| 
 |1|avg(property name)|属性的平均值|
 |2|count(property name or *)|属性在结果中出现的次数|
 |3|max(property name)|属性值的最大值|

@@ -2,6 +2,6 @@
     "name": "Hibernate 中文指南",
     "introduction": "Hibernate 是一个高性能的对象/关系型持久化存储和查询的工具。",
     "title": "Hibernate 中文指南 - 极客学院 Wiki",
-    "keywords": "Hibernate 中文指南,Hibernate 开发web应用",
+    "keywords": "Hibernate 中文指南,Hibernate 开发 Web 应用",
     "description": "Hibernate 用于从 Java 类到数据库表的映射，也有 Java 数据类型到 SQL 数据类型的映射，同时也提供了数据查询和检索服务。"
 }

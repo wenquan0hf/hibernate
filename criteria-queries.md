@@ -14,6 +14,7 @@ List results = cr.list();
 ## 对标准的限制
 
 你可以使用 **Criteria** 对象可用的 **add()** 方法去添加一个标准查询的限制。  
+
 以下是一个示例，它实现了添加一个限制，令返回工资等于 2000 的记录：  
 
 ```    
@@ -82,9 +83,9 @@ List results = cr.list();
 这里有两种分页标准接口方法：   
 
 | 序号| 方法描述  | 
-| :------------------- | :---------------------------- |  
-| 1 | public Criteria setFirstResult(int firstResult)，这种方法需要一个代表你的结果集的第一行的整数，以第 0 行为开始。 
-| 2 | public Criteria setMaxResults(int maxResults)，这个方法设置了 Hibernate 检索对象的 **maxResults**。 
+|:------------------- |:---------------------------- |  
+| 1 | public Criteria setFirstResult(int firstResult)，这种方法需要一个代表你的结果集的第一行的整数，以第 0 行为开始。| 
+| 2 | public Criteria setMaxResults(int maxResults)，这个方法设置了 Hibernate 检索对象的 **maxResults**。| 
   
 利用上述两种方法结合在一起，我们可以在我们的 Web 或 Swing 应用程序构建一个分页组件。以下是一个例子，利用它你可以一次取出 10 行：
 

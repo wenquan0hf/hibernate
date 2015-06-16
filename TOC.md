@@ -1,4 +1,3 @@
-- [Hibernate - 指南](home.md)             
 - [ORM 概览](orm-overview.md)                
 - [简介](overview.md)          
 - [架构](architecture.md)      
@@ -13,7 +12,7 @@
 - [注释](annotations.md)     
 - [查询语言](query-language.md)   
 - [标准查询](criteria-queries.md)  
-- [本地 SQL](native-sql.md)       
+- [原生 SQL](native-sql.md)       
 - [缓存](caching.md)           
 - [批处理](batch-processing.md)  
 - [拦截器](interceptors.md)      

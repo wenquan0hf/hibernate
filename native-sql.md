@@ -1,7 +1,7 @@
-# 本地 SQL  
+# 原生 SQL  
 
-如果你想使用数据库特定的功能如查询提示或 Oracle 中的 CONNECT 关键字的话，你可以使用本地 SQL 数据库来表达查询。Hibernate 3.x 允许您为所有的创建，更新，删除，和加载操作指定手写 SQL ，包括存储过程。  
-您的应用程序会在会话界面用 **createSQLQuery()** 方法创建一个本地 SQL 查询： 
+如果你想使用数据库特定的功能如查询提示或 Oracle 中的 CONNECT 关键字的话，你可以使用原生 SQL 数据库来表达查询。Hibernate 3.x 允许您为所有的创建，更新，删除，和加载操作指定手写 SQL ，包括存储过程。  
+您的应用程序会在会话界面用 **createSQLQuery()** 方法创建一个原生 SQL 查询： 
 
 ```
 public SQLQuery createSQLQuery(String sqlString) throws HibernateException
@@ -11,7 +11,7 @@ public SQLQuery createSQLQuery(String sqlString) throws HibernateException
 
 ## 标量查询 
 
-最基本的 SQL 查询是从一个或多个列表中获取一个标量（值）列表。以下是使用本地 SQL 进行获取标量的值的语法：  
+最基本的 SQL 查询是从一个或多个列表中获取一个标量（值）列表。以下是使用原生 SQL 进行获取标量的值的语法：  
 
 ```  
 String sql = "SELECT first_name, salary FROM EMPLOYEE";
@@ -22,7 +22,7 @@ List results = query.list();
 
 ## 实体查询 
  
-以上的查询都是关于返回标量值的查询，只是基础性地返回结果集中的“原始”值。以下是从本地数据查询中通过 addEntity() 方法获取实体对象整体的语法：  
+以上的查询都是关于返回标量值的查询，只是基础性地返回结果集中的“原始”值。以下是从原生 SQL 查询中通过 addEntity() 方法获取实体对象整体的语法：  
 
 ```
 String sql = "SELECT * FROM EMPLOYEE";
@@ -33,7 +33,7 @@ List results = query.list();
 
 ## 指定 SQL 查询
 
-以下是从本地数据查询中通过 addEntity() 方法和使用指定 SQL 查询来获取实体对象整体的语法：  
+以下是从原生 SQL 查询中通过 addEntity() 方法和使用指定 SQL 查询来获取实体对象整体的语法：  
 
 ```  
 String sql = "SELECT * FROM EMPLOYEE WHERE id = :employee_id";
@@ -43,7 +43,7 @@ query.setParameter("employee_id", 10);
 List results = query.list();  
 ```  
 
-## 本地 SQL 的例子
+## 原生 SQL 的例子
 
 考虑下面的 POJO 类： 
 
@@ -123,7 +123,7 @@ create table EMPLOYEE (
 </hibernate-mapping>
 ```   
 
-最后，我们将用 main() 方法创建应用程序类来运行应用程序，我们将使用**本地 SQL** 查询：   
+最后，我们将用 main() 方法创建应用程序类来运行应用程序，我们将使用**原生 SQL** 查询：   
 
 ```  
 import java.util.*; 
